@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "teaApp",
-    "slug": "teaApp",
+    "slug": "teaapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.artem98tema.teaapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9b2a3c00-c029-4372-8645-263a8d40f8fc"
+      }
     }
   }
 }
