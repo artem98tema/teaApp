@@ -43,7 +43,7 @@ const Main = () => {
         <View style={styles.container}>
             <View style={styles.buttonView}>
                 <TouchableOpacity onPress={goToWindow} style={styles.button}>
-                    <Text style={styles.text}>Окна</Text>
+                    <Text style={styles.text}>посуда</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.buttonView}>
