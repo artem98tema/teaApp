@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity, Text, ScrollView} from 'react-native';
-import {useNavigation} from "@react-navigation/native";
-
+import {View, StyleSheet, Text, ScrollView, Image} from 'react-native';
+import { useRoute} from "@react-navigation/native";
+import {images} from '../../img'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -26,33 +26,38 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
         justifyContent:'center',
     },
-    image:{
+    imageWrapper:{
         height: 200,
         width:300,
         backgroundColor:'pink',
         marginBottom:15,
         marginTop:20
-    }
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+    },
 });
 
 const Detail = () => {
-    const navigation = useNavigation();
-    const goToTea=()=>{
-        navigation.navigate('List',{
-            name: 'Чай',
-        })
-    }
-    const goToWindow=()=>{
-        navigation.navigate('List',{
-            name: 'Окна',
-        })
-    }
+    const route = useRoute();
+   const GetImage = (name) => {
+        const found = images.find(e => e.name === name);
+        return found ? found.image : null;
+    };
+    const backgroundImage = GetImage(
+        `${route.params.img}.jpg`,
+    );
+
     return(
 
             <ScrollView style={styles.container}>
                 <View style={styles.wrapper}>
-            <View style={styles.image}>
-
+            <View style={styles.imageWrapper}>
+                <Image
+                    style={styles.image}
+                    source={backgroundImage}
+                />
             </View>
             <Text>asdasdasdasdadsasd</Text>
                 </View>

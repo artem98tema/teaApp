@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Main from "./Screens/Main";
 import List from "./Screens/List";
 import Detail from "./Screens/Detail";
+import ListDetail from "./Screens/List/listDetail";
 
 function HomeScreen() {
     return (
@@ -14,6 +15,11 @@ function HomeScreen() {
 function ListScreen() {
     return (
         <List/>
+    );
+}
+function ListDetailScreen() {
+    return (
+        <ListDetail/>
     );
 }
 function DetailScreen() {
@@ -29,6 +35,7 @@ function MainNavigator() {
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
                 <Stack.Screen name="List" component={ListScreen} options={({ route }) => ({ title: route.params.name,headerBackTitle:'Назад'  })} />
+                <Stack.Screen name="ListDetail" component={ListDetailScreen} options={({ route }) => ({ title: route.params.name,headerBackTitle:'Назад'  })} />
                 <Stack.Screen name="Detail" component={DetailScreen} options={({ route }) => ({ title: route.params.name,headerBackTitle:'Назад'  })} />
             </Stack.Navigator>
         </NavigationContainer>

@@ -32,8 +32,13 @@ const styles = StyleSheet.create({
         marginHorizontal: 16,
     },
 });
-const data=['зеленый чай', 'красный чай','еще чай']
-const data2=['окно 1', 'окно 2','еще окно']
+const tea=[
+    {name:'зеленый чай',img:'GT1'},
+    {name:'красный чай',img:'GT2'},
+    {name:'белый чай', img:'GT3'},
+    {name:'желтый чай', img:'GT4'},
+    {name:'пуэр чай', img:'GT5'}]
+const window=[{name:'окно 1',id:1}, {name:'окно 2',id:2}, {name:'еще окно',id:3}]
 
 const Item = ({title}) => (
     <View style={styles.item}>
@@ -43,18 +48,19 @@ const Item = ({title}) => (
 const List = () => {
     const navigation = useNavigation();
     const route = useRoute();
-    const goToList=(name)=>{
-        navigation.navigate('Detail',{
-            name: name,
+    const goToList=(item)=>{
+        navigation.navigate('ListDetail',{
+            name: item.name,
+            img:item.img
         })
     }
 
     return(
         <View style={styles.container}>
             <FlatList
-                data={route.params?.name==='Чай'?data:data2}
-                renderItem={({item}) => <TouchableOpacity onPress={()=>goToList(item)}><Item title={item} /></TouchableOpacity>}
-                keyExtractor={item => item.id}
+                data={route.params?.name==='Чай'?tea:window}
+                renderItem={({item}) => <TouchableOpacity onPress={()=>goToList(item)}><Item title={item.name} /></TouchableOpacity>}
+                keyExtractor={item => item.img}
             />
         </View>
     )
