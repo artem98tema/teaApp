@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     imageWrapper:{
         height: 200,
         width:300,
-        backgroundColor:'pink',
         marginBottom:15,
         marginTop:20
     },
@@ -37,6 +36,13 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
+    textWrapper:{
+        width: '100%',
+        paddingHorizontal:30,
+    },
+    text:{
+        fontSize:18
+    }
 });
 
 const Detail = () => {
@@ -59,7 +65,10 @@ const Detail = () => {
                     source={backgroundImage}
                 />
             </View>
-            <Text>asdasdasdasdadsasd</Text>
+                    <View style={styles.textWrapper}>
+                        <Text style={styles.text}>{route.params?.text? route.params?.text:'простое описание'}</Text>
+                    </View>
+
                 </View>
             </ScrollView>
 

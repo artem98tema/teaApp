@@ -40,8 +40,11 @@ const Item = ({title}) => (
         <Text style={styles.title}>{title}</Text>
     </View>
 );
+
+//Экрвн для видов
+
 const greenTea=[
-    {name:'чай зеленый 1',img:'GT1'},
+    {name:'чай зеленый 1',img:'GT1',text:'описание чая очень много красного чая \n       чтобы красная строк'},
     {name:'чай зеленый 2',img:'GT2'},
     {name:'чай зеленый 3',img:'GT3'},
     {name:'чай зеленый 4',img:'GT4'},
@@ -83,7 +86,8 @@ const ListDetail = () => {
     const goToList=(item)=>{
         navigation.navigate('Detail',{
             name: item.name,
-            img:item.img
+            img:item.img,
+            text:item.text
         })
     }
 

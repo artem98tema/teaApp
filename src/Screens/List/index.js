@@ -33,11 +33,10 @@ const styles = StyleSheet.create({
     },
 });
 const tea=[
-    {name:'зеленый чай',img:'GT1'},
-    {name:'красный чай',img:'GT2'},
-    {name:'белый чай', img:'GT3'},
-    {name:'желтый чай', img:'GT4'},
-    {name:'пуэр чай', img:'GT5'}]
+    {name:'зеленый чай'},
+    {name:'красный чай'},
+    {name:'белый чай',},
+    {name:'пуэр чай',}]
 const window=[{name:'окно 1',id:1}, {name:'окно 2',id:2}, {name:'еще окно',id:3}]
 
 const Item = ({title}) => (

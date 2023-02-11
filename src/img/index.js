@@ -19,5 +19,6 @@ export const images = [
     {image:require('./WT1.jpg'),id:3,name:'WT1.jpg'},
     {image:require('./WT2.jpg'),id:3,name:'WT2.jpg'},
     {image:require('./WT3.jpg'),id:3,name:'WT3.jpg'},
+    // {image:require('./WT3.jpg'),id:3,name:'WT3.jpg'},
 
 ]

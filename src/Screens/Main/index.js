@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent: 'space-between',
         alignItems:'center',
-        paddingHorizontal:80
+        paddingHorizontal:80,
+
 
     },
     button:{
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     buttonView:{
         height:30,
         width:80,
-        borderRadius:10,
+        // borderRadius:10,
         backgroundColor: 'green',
         justifyContent:'center',
     }
@@ -36,7 +37,7 @@ const Main = () => {
     }
     const goToWindow=()=>{
         navigation.navigate('List',{
-            name: 'Окна',
+            name: 'Посуда',
         })
     }
     return(
