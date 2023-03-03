@@ -2,6 +2,8 @@ import React from 'react';
 import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import {useNavigation} from "@react-navigation/native";
 
+
+// Стилизуем нащи компоненты для красоты
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -20,14 +22,16 @@ const styles = StyleSheet.create({
     buttonView:{
         height:30,
         width:80,
-        // borderRadius:10,
         backgroundColor: 'green',
         justifyContent:'center',
     }
 });
 
 const Main = () => {
+    // получаем метод для перехода на экран
     const navigation = useNavigation();
+
+    // функция для перехода на нужный нам экран
     const goToTea=()=>{
         navigation.navigate('List',{
             name: 'Чай',

@@ -1,3 +1,5 @@
+
+// экспоротируем нащи картинки для удобства использования
 export const images = [
     {image:require('./GT1.jpg'),name:'GT1.jpg'},
     {image:require('./GT2.jpg'),name:'GT2.jpg'},

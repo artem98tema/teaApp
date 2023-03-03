@@ -47,14 +47,16 @@ const styles = StyleSheet.create({
 
 const Detail = () => {
     const route = useRoute();
+    // функция для нахождения нужной объекта их всех наших картинок по name
    const GetImage = (name) => {
         const found = images.find(e => e.name === name);
         return found ? found.image : null;
     };
+   //получам нужную картинку
     const backgroundImage = GetImage(
         `${route.params.img}.jpg`,
     );
-
+// присаиваем нужную картинку в строке 67, и используем компонент scrollVew для того чтобы есди будет много текста, то можно было проскроолить его ниже
     return(
 
             <ScrollView style={styles.container}>
