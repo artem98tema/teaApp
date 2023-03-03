@@ -10,8 +10,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems:'center',
         paddingHorizontal:80,
-
-
     },
     button:{
         alignItems:'center',
